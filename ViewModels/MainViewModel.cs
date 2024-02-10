@@ -2,18 +2,16 @@
 using System.Collections.ObjectModel;
 using System;
 using System.Windows.Input;
-using CSE231_PrepTests;
+using System.IO;
 
 namespace CSE231_PrepTest_Avalonia.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public ICommand OpenFileButton { get; }
         public ObservableCollection<Person> person { get; set; }
 
         public MainViewModel()
         {
-            OpenFileButton = new RelayCommand(OpenFileButton_Clicked);
             var people = new List<Person>
             {
                 new Person("Neil", "Armstrong"),
@@ -22,10 +20,23 @@ namespace CSE231_PrepTest_Avalonia.ViewModels
             };
             person = new ObservableCollection<Person>(people);
         }
-
-        public void OpenFileButton_Clicked()
+        //Question + Test info
+        List<TestInfo> tests = new List<TestInfo>();
+        TestInfo curTest = null;
+        Question curQ = null;
+        public void FileAddToTests(string file, string fileContent)
         {
+            TestInfo tempTest = new TestInfo();
+            try
+            {
+                tempTest.DissectTest(file, fileContent);
+                tests.Add(tempTest);
+                //updateTable();
+            }
+            catch
+            {
 
+            }
         }
     }
 
