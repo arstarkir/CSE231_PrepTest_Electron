@@ -11,7 +11,7 @@
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
     <vm:MainViewModel />
   </Design.DataContext>
-  <ContentControl>
+  <StackPanel>
     <DataGrid Margin="20" ItemsSource="{Binding person}"
           IsReadOnly="True"
           CanUserReorderColumns="True"
@@ -21,10 +21,13 @@
           BorderThickness="1" BorderBrush="Gray">
       <DataGrid.Columns>
         <DataGridTextColumn Header="First Name"  Binding="{Binding FirstName}"/>
-        <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
+        <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+        <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+        <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
       </DataGrid.Columns>
     </DataGrid>
-
-  </ContentControl>
-
+    
+    <TextBlock Text="CSE231 Prep Tests" />
+    <Button Content="Add test" Command="{Binding OpenFileButton}"/>
+  </StackPanel>
 </UserControl>

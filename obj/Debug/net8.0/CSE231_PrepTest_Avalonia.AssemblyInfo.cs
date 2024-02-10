@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSE231_PrepTest_Avalonia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14dd97b5c01a5539cc0c7e51446e7e39e4dbaf42")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSE231_PrepTest_Avalonia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSE231_PrepTest_Avalonia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
