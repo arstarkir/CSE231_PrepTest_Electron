@@ -1,7 +1,30 @@
-/**
- * This file is loaded via the <script> tag in the index.html file and will
- * be executed in the renderer process for that window. No Node.js APIs are
- * available in this process because `nodeIntegration` is turned off and
- * `contextIsolation` is turned on. Use the contextBridge API in `preload.js`
- * to expose Node.js functionality from the main process.
- */
+document.addEventListener('DOMContentLoaded', () => {
+    const dropZone = document.getElementById('drop_zone');
+  
+    dropZone.addEventListener('dragover', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+        //alert("assas");
+
+     dropZone.style = "border: 3px dotted red";
+    });
+    
+    dropZone.addEventListener('dragleave', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        dropZone.style = "border: 3px dotted black";
+    });
+
+    dropZone.addEventListener('drop', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+  
+      if (event.dataTransfer) {
+        const files = event.dataTransfer.files;
+        console.log(files);
+        // Here, you can handle the files as needed, such as sending them to the main process via IPC
+      }
+    });
+  });
+  

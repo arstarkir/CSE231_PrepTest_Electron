@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const addFile = document.getElementById("example");
   addFile.onclick = () =>{
-    alert("assas");
+    //alert("assas");
     myCreateFunction();
   }
 })
