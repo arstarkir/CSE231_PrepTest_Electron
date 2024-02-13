@@ -1,19 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System;
-using System.Windows.Input;
-using CSE231_PrepTests;
 
 namespace CSE231_PrepTest_Avalonia.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public ICommand OpenFileButton { get; }
+#pragma warning disable CA1822 // Mark members as static
+        public string Greeting => "Welcome to Avalonia!";
+#pragma warning restore CA1822 // Mark members as static
         public ObservableCollection<Person> person { get; set; }
 
         public MainViewModel()
         {
-            OpenFileButton = new RelayCommand(OpenFileButton_Clicked);
             var people = new List<Person>
             {
                 new Person("Neil", "Armstrong"),
@@ -21,11 +20,6 @@ namespace CSE231_PrepTest_Avalonia.ViewModels
                 new Person("James", "Kirk")
             };
             person = new ObservableCollection<Person>(people);
-        }
-
-        public void OpenFileButton_Clicked()
-        {
-
         }
     }
 

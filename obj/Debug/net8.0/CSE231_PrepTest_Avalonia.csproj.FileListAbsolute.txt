@@ -16,4 +16,3 @@ C:\Users\arsta\source\repos\CSE231_PrepTest_Avalonia\CSE231_PrepTest_Avalonia\CS
 C:\Users\arsta\source\repos\CSE231_PrepTest_Avalonia\CSE231_PrepTest_Avalonia\CSE231_PrepTest_Avalonia\obj\Debug\net8.0\CSE231_PrepTest_Avalonia.dll
 C:\Users\arsta\source\repos\CSE231_PrepTest_Avalonia\CSE231_PrepTest_Avalonia\CSE231_PrepTest_Avalonia\obj\Debug\net8.0\CSE231_PrepTest_Avalonia.pdb
 C:\Users\arsta\source\repos\CSE231_PrepTest_Avalonia\CSE231_PrepTest_Avalonia\CSE231_PrepTest_Avalonia\obj\Debug\net8.0\ref\CSE231_PrepTest_Avalonia.dll
-C:\Users\arsta\source\repos\CSE231_PrepTest_Avalonia\CSE231_PrepTest_Avalonia\CSE231_PrepTest_Avalonia\obj\Debug\net8.0\CSE231_PrepTest_Avalonia.sourcelink.json
