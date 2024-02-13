@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSE231_PrepTest_Avalonia
+namespace CSE231_PrepTests
 {
     internal class TableInfoSave
     {
@@ -14,7 +14,7 @@ namespace CSE231_PrepTest_Avalonia
         public TestInfo test;
         public TableInfoSave(string name, string numOfQ, /*Button button,*/ ref TestInfo test)
         {
-            this.name = name;
+            this.name = name;   
             this.numOfQ = numOfQ;
             //this.button = button;
             this.test = test;

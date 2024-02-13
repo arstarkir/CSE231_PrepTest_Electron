@@ -26,8 +26,8 @@
         <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
       </DataGrid.Columns>
     </DataGrid>
+    
     <TextBlock Text="CSE231 Prep Tests" />
-    <Button Content="Add test" Click="OpenFileButton_Clicked"/>
+    <Button Content="Add test" Command="{Binding OpenFileButton}"/>
   </StackPanel>
-
 </UserControl>

@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace CSE231_PrepTest_Avalonia
+namespace CSE231_PrepTests
 {
     enum AnswerdQ
     {
@@ -22,7 +22,7 @@ namespace CSE231_PrepTest_Avalonia
         public string questionText = "No Question Found";
         public int questionNum = 0;
         public Dictionary<string, bool> options = new Dictionary<string, bool>();
-        public Question(string question, Dictionary<string, bool> options, bool isPartOf = false, int qNum = 0)
+        public Question(string question, Dictionary<string, bool> options, bool isPartOf = false,int qNum = 0) 
         {
             questionText = question;
             this.options = options;
