@@ -7,16 +7,13 @@ window.addEventListener('DOMContentLoaded', () => {
   for (const type of ['chrome', 'node', 'electron']) {
     replaceText(`${type}-version`, process.versions[type])
   }
-  function myCreateFunction() {
+  function myCreateFunction(name = "Error",numOfQ = "Error",qFin="Error") {
     let table = document.getElementById("table_id").getElementsByTagName('tbody')[0];
     let row = table.insertRow();
-    let c1 = row.insertCell(0);
-    let c2 = row.insertCell(1);
-    let c3 = row.insertCell(2);
+    row.insertCell(0).innerText =name;
+    row.insertCell(1).innerText =numOfQ;
+    row.insertCell(2).innerText =qFin;
     let c4 = row.insertCell(3);
-    c1.innerText = "Elon";
-    c2.innerText = "45";
-    c3.innerText = "Houston";
     c4.innerHTML = "<button>Start</button>";
     row.appendChild(c1);
     row.appendChild(c2);

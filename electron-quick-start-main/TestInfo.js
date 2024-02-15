@@ -1,3 +1,8 @@
+//const preload = require("electron/preload");
+function al()
+{
+    alert("al")
+}
 class TestInfo {
     constructor(name = "Not Found", genInfo = "", answers = {}, qFinished = 0, numOfQuestions = 0, wasStarted = false, questions = []) {
         this.name = name;
@@ -8,21 +13,21 @@ class TestInfo {
         this.wasStarted = wasStarted;
         this.questions = questions; // Assume Question is defined elsewhere
     }
-
     // Assuming Question class or constructor function is defined somewhere else
 }
-
-dissectTest(filePath, text) 
+function  dissectTest(text,fileName = "null") 
 {
-    filePath = filePath.substring(filePath.lastIndexOf("\\") + 1);
-    let name = filePath.substring(0, filePath.length - 4);
+    alert(text)
+    let name = fileName;
     text = text.substring(text.indexOf("Directions:") + 1);
+    alert("a")
     let genInfo = text.substring(0, text.indexOf("Form ") - 1);
     text = text.substring(text.indexOf("Form ") + "Form ".length);
     text = text.substring(text.indexOf("\n") + 1);
     let numLines = text.substring(0, text.indexOf("\n01") + "\n01".length).split('\n').length - 1;
     let answers = {};
     let numOfQuestions = 0;
+    alert("1")
     for (let i = 0; i < Math.floor(numLines / 3); i++) {
         let temp = text.substring(0, text.indexOf("\n")).replace(/\s+/g, " ");
         let nums = temp.split(' ');
@@ -40,6 +45,8 @@ dissectTest(filePath, text)
             try {
                 answers[parseInt(num)] = ans[j];
                 numOfQuestions = parseInt(num);
+                alert(numOfQuestions)
+
             } catch (e) {
                 // continue on error
             }
@@ -47,6 +54,7 @@ dissectTest(filePath, text)
         text = text.substring(text.indexOf("\n") + 2);
     }
 
+    alert("2")
     let numToAns = {0: "A)", 1: "B)", 2: "C)", 3: "D)", 4: "E)"};
     let prevFig = "";
     for (let i = 1; i <= numOfQuestions; i++) {
@@ -81,5 +89,10 @@ dissectTest(filePath, text)
 
         this.questions.push(new Question(questionText, options, isPartOfMQ, questionNum)); // Assuming Question structure
     }
-    return new TestInfo(name, genInfo, answers,0, numOfQuestions, false, questions = [])
-}
+    let temp = new TestInfo(name, genInfo, answers,0, numOfQuestions, false, questions = []);
+    alert(name)
+    alert(genInfo)
+    alert(answers)
+    
+    return temp
+    }
