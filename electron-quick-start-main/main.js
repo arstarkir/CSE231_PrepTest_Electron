@@ -9,7 +9,7 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-
+  win.loadFile('question.html');
   win.loadFile('index.html')
   contextBridge.exposeInMainWorld('electron', {
     startDrag: (fileName) => {
